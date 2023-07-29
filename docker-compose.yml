@@ -1,0 +1,12 @@
+services:
+  selfmodifai:
+    build: .
+    environment:
+      - OPENAI_API_KEY
+      - SELFMODIFAI_GH_PAT
+    volumes:
+      - alpaca-lora:/selfmodifai/selfmodifai-alpaca-lora
+      - prompts:/selfmodifai/prompts
+volumes:
+  alpaca-lora:
+  prompts:
